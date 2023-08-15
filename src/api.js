@@ -9,7 +9,7 @@ server.use(express.json())
 
 
 
-server.get('/pong', async (request, response)=> { 
+server.get('/pong', async (request, response) => {
     response.send('aa')
 })
 
@@ -24,7 +24,7 @@ server.get('/dobro/:numero', async (request, response) => {
 })
 
 
-server.get('/multipli',(request, response) => {
+server.get('/multipli', (request, response) => {
     let v1 = Number(request.query.v1)
     let v2 = Number(request.query.v2)
 
@@ -49,7 +49,7 @@ server.get('/media', (request, response) => {
     })
 })
 
-server.post('/soma', (request, response) =>{
+server.post('/soma', (request, response) => {
     let a = request.body.a
     let b = request.body.b
 
@@ -60,7 +60,7 @@ server.post('/soma', (request, response) =>{
     })
 })
 
-server.post('/media', (request, response) =>{
+server.post('/media', (request, response) => {
     let nota1 = request.body.nota1
     let nota2 = request.body.nota2
     let nota3 = request.body.nota3
@@ -76,6 +76,6 @@ server.post('/media', (request, response) =>{
 
 
 
-    server.listen(process.env.PORT, console.log(`
+server.listen(process.env.PORT, console.log(`
         A API ESTA NA PORTA ${process.env.PORT}
     `))
